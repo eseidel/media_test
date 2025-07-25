@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 // Make sure to add following packages to pubspec.yaml:
 // * media_kit
 // * media_kit_video
@@ -8,14 +7,17 @@ import 'package:media_kit/media_kit.dart'; // Provides [Player], [Media], [Playl
 import 'package:media_kit_video/media_kit_video.dart'; // Provides [VideoController] & [Video] etc.
 
 void main() {
+  print("main");
   WidgetsFlutterBinding.ensureInitialized();
   // Necessary initialization for package:media_kit.
+  print("MediaKit.ensureInitialized");
   MediaKit.ensureInitialized();
+  print("MediaKit.ensureInitialized done");
   runApp(const MaterialApp(home: MyScreen()));
 }
 
 class MyScreen extends StatefulWidget {
-  const MyScreen({Key? key}) : super(key: key);
+  const MyScreen({super.key});
   @override
   State<MyScreen> createState() => MyScreenState();
 }
